@@ -1,3 +1,5 @@
+from multiplayer_drawing import app
+
 def main():
     print("Hello from multiplayer-drawing!")
 

@@ -1,7 +1,7 @@
 [project]
 name = "multiplayer-drawing"
 version = "0.1.0"
-description = "Add your description here"
+description = "A multiplayer drawing app written in Python"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = []

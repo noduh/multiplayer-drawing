@@ -1,0 +1,17 @@
+*.docx
+.~lock*
+*.time
+*.pdf
+.vscode/
+*.drawio
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv

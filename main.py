@@ -1,7 +1,15 @@
-from multiplayer_drawing import app
+from multiplayer_drawing import MyWidget
+from PySide6 import QtWidgets, QtUiTools
+import sys
+
 
 def main():
-    print("Hello from multiplayer-drawing!")
+    app = QtWidgets.QApplication([])
+
+    window = QtUiTools.QUiLoader().load("ui/connection.ui")
+    window.show()
+
+    sys.exit(app.exec())
 
 
 if __name__ == "__main__":

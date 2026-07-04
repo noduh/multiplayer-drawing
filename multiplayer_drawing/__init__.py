@@ -1,1 +1,1 @@
-from .app import MyWidget
+from .app import ConnectionWindow

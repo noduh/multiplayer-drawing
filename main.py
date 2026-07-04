@@ -1,14 +1,12 @@
-from multiplayer_drawing import MyWidget
+from multiplayer_drawing import ConnectionWindow
 from PySide6 import QtWidgets, QtUiTools
 import sys
 
 
 def main():
     app = QtWidgets.QApplication([])
-
-    window = QtUiTools.QUiLoader().load("ui/connection.ui")
+    window = ConnectionWindow()
     window.show()
-
     sys.exit(app.exec())
 
 

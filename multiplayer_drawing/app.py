@@ -1,24 +1,18 @@
-import random
-from PySide6 import QtCore, QtWidgets, QtGui
+from ui.connection import Ui_Connection
+from PySide6 import QtCore, QtWidgets
 
 
-class MyWidget(QtWidgets.QWidget):
+class ConnectionWindow(QtWidgets.QWidget, Ui_Connection):
     def __init__(self):
         super().__init__()
+        self.setupUi(self)
 
-        self.hello = ["Hallo Welt", "Hei maailma", "Hola Mundo", "Привет мир"]
+        self.connect_button.clicked.connect(self.connect_button_handler)
 
-        self.button = QtWidgets.QPushButton("Click me!")
-        self.text = QtWidgets.QLabel(
-            "Hello World", alignment=QtCore.Qt.AlignmentFlag.AlignCenter
-        )
-
-        self.layout_main = QtWidgets.QVBoxLayout(self)
-        self.layout_main.addWidget(self.text)
-        self.layout_main.addWidget(self.button)
-
-        self.button.clicked.connect(self.magic)
-    
     @QtCore.Slot()
-    def magic(self):
-        self.text.setText(random.choice(self.hello))
+    def connect_button_handler(self):
+        ip = self.ip_input.text()
+        port = self.port_input.text()
+
+        print(f"IP: {ip}\nPort: {port}")
+        self.close()
